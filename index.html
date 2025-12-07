@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<!-- 
+    ده بيعرف للمتصفح إن الملف ده صفحة HTML 5 
+-->
+
+<html lang="en">
+<!-- 
+    وده معناه إن لغة الصفحة الأساسية هي English
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+        ده بيحدد ترميز الحروف UTF-8 
+        عشان يدعم كل اللغات ومايبقاش فيه مشاكل رموز غريبة
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        ده أهم تاج للريسبونسيف (الموبايل)
+        بيخلي الصفحة تزبط نفسها حسب عرض الموبايل أو الكمبيوتر
+    -->
+
+    <!-- 
+        ============================
+            ⭐ SEO META TAGS ⭐
+        ============================
+        الكيووردز والديسكريبشن مهمين جداً للسيو
+        وبيساعدوا جوجل يفهم محتوى الموقع.
+        تم تعديلهم حسب السيناريو بتاع لوفينج هوم بالظبط.
+    -->
+
+    <meta name="keywords" content="Loving Homes, dog hotel Hong Kong, dog daycare Hong Kong, dog boarding,
+     grooming spa dogs, underfloor heated dog rooms, dog rooms with TV, dog chauffeur service, outdoor dog paddocks,
+      indoor play barn, woodland dog walks, private dog grass area, 24-hour vet service, premium dog package, classic dog package,
+       day dog package, custom dog care, luxury dog care, dog activity services, pet watch Hong Kong">
+
+    <meta name="description" content="Loving Homes is a high-quality dog hotel in Hong Kong offering daycare,
+     boarding, grooming spa, heated and cooled rooms with TV, chauffeur collect-and-return service, outdoor paddocks, 
+     indoor play barn, woodland walks, private grass areas, and personalized dog packages including Premium, Classic, Day, 
+     and custom options.">
+
+    <!-- 
+        ============================
+               END SEO META
+        ============================
+    -->
+
+    <title>Loving Home - Dog Daycare & Boarding</title>
+    <!-- 
+        العنوان اللي بيظهر فوق في التاب بتاع المتصفح
+    -->
+
+    <link rel="stylesheet" href="loving home .css">
+    <!-- 
+        هنا بتربط ملف CSS خارجي اسمه "loving home .css"
+        عشان تتحكم في شكل وتصميم الصفحة
+    -->
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- home -->
+<!-- 
+    ده القسم الرئيسي للصفحة اللي بيضم الهيدر والمحتوى الأساسي (الـ Hero section)
+-->
+<div class="home-wrapper">
+    <div class="header">
+
+
+
+        <!-- Left: Logo -->
+        <!-- 
+            الجزء اللي على الشمال في الهيدر
+            بيحتوي على اللوجو بتاع الموقع
+        -->
+        <div class="header-left">
+            <img src="images/LOGO (2).png" class="logo-img" alt="Logo">
+            <!-- 
+                صورة اللوجو
+                - src: مسار الصورة
+                - class: اسم الكلاس للتحكم في التصميم
+                - alt: وصف الصورة لو ما ظهرتش
+            -->
+        </div>
+
+
+
+
+        <!-- Center: Search Bar (Flexible) -->
+        <!-- 
+            الجزء اللي في النص في الهيدر
+            بيحتوي على صندوق البحث
+        -->
+        <div class="header-center">
+            <div class="search-bar">
+                <img src="images/search icon .png" class="search-icon icon-img" alt="Search">
+                <!-- أيقونة البحث -->
+                <input type="text" data-i18n="search_placeholder" placeholder="Search...">
+                <!-- 
+                    مربع إدخال النص للبحث
+                    - data-i18n: مفتاح للترجمة
+                    - placeholder: النص اللي ظاهر قبل الكتابة
+                -->
+            </div>
+        </div>
+        
+
+
+
+        <!-- Right: Lang + Menu -->
+        <!-- 
+            الجزء اللي على اليمين في الهيدر
+            بيحتوي على زر اللغة وزر قائمة الموبايل
+        -->
+        <div class="header-right">
+            <!-- Lang Button -->
+            <!-- زر تغيير اللغة -->
+            <button class="lang-btn" onclick="toggleLanguage()">
+                <img src="images/language icon.png" alt="Lang">
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <!-- زر فتح وغلق قائمة الموبايل -->
+            <button class="menu-btn" onclick="toggleMenu()">
+                <img src="images/menu.png" class="icon-img" alt="Menu" style="width: 32px; height: 32px;">
+            </button>
+        </div>
+
+        <!-- Nav Links (Collapsible on Mobile) -->
+        <!-- 
+            روابط التنقل الرئيسية
+            بتكون قابلة للطي على الموبايل
+            - onclick="closeMenu()" : تقفل القائمة بعد الضغط على أي رابط
+        -->
+        <div class="nav-links" id="navLinks">
+            <a href="#" data-i18n="nav_home" onclick="closeMenu()">Home</a>
+            <a href="#packages" data-i18n="nav_packages" onclick="closeMenu()">Packages</a>
+            <a href="#about" data-i18n="nav_about" onclick="closeMenu()">About us</a>
+            <a href="#contact" data-i18n="nav_contact" onclick="closeMenu()">Contact us</a>
+            <a href="#facilities" data-i18n="nav_facilities" onclick="closeMenu()">Facilities</a>
+        </div>
+    </div>
+    
+
+
+
+    <!-- Main Content / Hero Section -->
+    <!-- 
+        الجزء الرئيسي في الصفحة اللي بيظهر أول حاجة للمستخدم
+        بيحتوي على العنوان الرئيسي، العنوان الفرعي، شعار، وزر التواصل
+    -->
+    <div class="main-content">
+        <div class="logo-text" data-i18n="hero_title">Loving Home</div>
+        <!-- العنوان الرئيسي للموقع -->
+
+        <div class="subtitle" data-i18n="hero_subtitle">Hong Kong's Premier<br>Dog Daycare & Boarding</div>
+        <!-- العنوان الفرعي -->
+
+        <div class="tagline" data-i18n="hero_tagline">We're Here for You</div>
+        <!-- شعار قصير أو رسالة للزائر -->
+
+        <a href="#contact" class="contact-btn" data-i18n="hero_btn">Contact us</a>
+        <!-- زر للتواصل أو الحجز -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Facilities -->
+    <section class="section facilities-section" id="facilities">
+        <h2 class="section-title">
+            <span data-i18n="facilities_title">🦴Our Premium Facilities</span>
+        </h2>
+        
+        <div class="facilities-grid">
+            <!-- 1 -->
+            <div class="facility-card">
+                <div class="facility-img-bg"><img src="images/private grass areas.png" alt="Private grass areas"></div>
+                <h3 data-i18n="facility_1">private grass areas</h3>
+                <a href="#contact" class="btn-yellow" data-i18n="buy_now">Buy now</a>
+            </div>
+            <!-- 2 -->
+            <div class="facility-card">
+                <div class="facility-img-bg"><img src="images/rooms with underfloor heatingcooling and tv.jpg" alt="Rooms with TV"></div>
+                <h3 data-i18n="facility_2">Rooms with underfloor heating/cooling and TV</h3>
+                <a href="#contact" class="btn-yellow" data-i18n="buy_now">Buy now</a>
+            </div>
+            <!-- 3 -->
+            <div class="facility-card">
+                <div class="facility-img-bg"><img src="images/woodland walks.jpg" alt="Woodland walks"></div>
+                <h3 data-i18n="facility_3">woodland walks</h3>
+                <a href="#contact" class="btn-yellow" data-i18n="buy_now">Buy now</a>
+            </div>
+            <!-- 4 -->
+             <div class="facility-card">
+                <div class="facility-img-bg"><img src="images/Grooming parlour and spa for dog.webp" alt="Grooming"></div>
+                <h3 data-i18n="facility_4">Grooming parlour and spa for dog</h3>
+                <a href="#contact" class="btn-yellow" data-i18n="buy_now">Buy now</a>
+            </div>
+            <!-- 5 -->
+            <div class="facility-card">
+                <div class="facility-img-bg"><img src="images/24-hour on-call veterinary services.jpeg" alt="Veterinary"></div>
+                <h3 data-i18n="facility_5">24-hour on-call veterinary services</h3>
+                <a href="#contact" class="btn-yellow" data-i18n="buy_now">Buy now</a>
+            </div>
+            <!-- 6 -->
+            <div class="facility-card">
+                <div class="facility-img-bg"><img src="images/indoor play barn..webp" alt="Indoor play"></div>
+                <h3 data-i18n="facility_6">indoor play barn.</h3>
+                <a href="#contact" class="btn-yellow" data-i18n="buy_now">Buy now</a>
+            </div>
+            <!-- 7 -->
+            <div class="facility-card">
+                <div class="facility-img-bg"><img src="images/Secure outdoor paddocks.png" alt="Outdoor paddocks"></div>
+                <h3 data-i18n="facility_7">Secure outdoor paddocks</h3>
+                <a href="#contact" class="btn-yellow" data-i18n="buy_now">Buy now</a>
+            </div>
+            <!-- 8 -->
+            <div class="facility-card">
+                <div class="facility-img-bg"><img src="images/Chauffeur ‘collect and return’ service .webp" alt="Chauffeur"></div>
+                <h3 data-i18n="facility_8">Chauffeur ‘collect and return’ service</h3>
+                <a href="#contact" class="btn-yellow" data-i18n="buy_now">Buy now</a>
+            </div>
+            <!-- 9 -->
+            <div class="facility-card">
+                <div class="facility-img-bg"><img src="images/pet watch.jpg" alt="Pet watch"></div>
+                <h3 data-i18n="facility_9">pet watch</h3>
+                <a href="#contact" class="btn-yellow" data-i18n="buy_now">Buy now</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    
+    <!-- Packages -->
+    <section class="section packages-section" id="packages">
+        <h2 class="section-title">
+            <span data-i18n="packages_title">🏡 Personalized Packages – Tailored Care for Every Pet ♥️</span> 
+            
+        </h2>
+        
+        <!-- Pkg 1 -->
+        <div class="package-item">
+            <div class="package-img-wrapper"><img src="images/PACK1.png" alt="Pack 1"></div>
+            <div class="package-info">
+                <h3>
+                    
+                    <span data-i18n="pkg_1_title">✨ The Spoiled Pup Special</span>
+                </h3>
+                <ul>
+                    <li data-i18n="pkg_1_li1">Four walks/activities per day</li>
+                    <li data-i18n="pkg_1_li2">Private grass area</li>
+                    <li data-i18n="pkg_1_li3">Daily updates/photos</li>
+                    <li data-i18n="pkg_1_li4">Treats (as agreed with owner)</li>
+                </ul>
+                <a href="#contact" class="btn-yellow" data-i18n="book_now">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Pkg 2 -->
+        <div class="package-item reverse">
+            <div class="package-img-wrapper"><img src="images/PACK2.png" alt="Pack 2"></div>
+            <div class="package-info">
+                <h3>
+                    
+                    <span data-i18n="pkg_2_title">🌟 The Cozy Comfort Classic</span>
+                </h3>
+                <ul>
+                    <li data-i18n="pkg_2_li1">three walks/activities per day</li>
+                    <li data-i18n="pkg_2_li2">indoor play barn</li>
+                    <li data-i18n="pkg_2_li3">zen zone</li>
+                    <li data-i18n="pkg_2_li4">grooming session.</li>
+                </ul>
+                <a href="#contact" class="btn-yellow" data-i18n="book_now">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Pkg 3 -->
+        <div class="package-item">
+            <div class="package-img-wrapper"><img src="images/PACK3.png" alt="Pack 3"></div>
+            <div class="package-info">
+                <h3>
+                    
+                    <span data-i18n="pkg_3_title">🌞 The Fun-Day Package</span>
+                </h3>
+                <ul>
+                    <li data-i18n="pkg_3_li1">two walks per day</li>
+                    <li data-i18n="pkg_3_li2">external play area</li>
+                    <li data-i18n="pkg_3_li3">agility track</li>
+                    <li data-i18n="pkg_3_li4">sand digging the pit.</li>
+                </ul>
+                <a href="#contact" class="btn-yellow" data-i18n="book_now">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Pkg 4 -->
+        <div class="package-item reverse">
+            <div class="package-img-wrapper"><img src="images/custom .jpg" alt="Custom"></div>
+            <div class="package-info">
+                <h3>
+                    
+                    <span data-i18n="pkg_4_title">💫Build Your Custom Package</span>
+                </h3>
+                <p data-i18n="pkg_4_desc" style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Every pet is unique. Tailor the perfect stay by mixing and matching our services to fit your dog's specific needs and personality.
+                </p>
+                <a href="#contact" class="btn-yellow" data-i18n="custom_now">Custom now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about-section" id="about">
+        <h2 class="about-title">
+            
+            <span data-i18n="about_main_title">🐾 About LOVING HOME – Where Every Pet Feels at Home 🏡</span> 
+            
+        </h2>
+        <div class="about-container">
+            <div class="about-text">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h3 style="font-size:22px; margin-bottom:10px;" data-i18n="about_sub_title">Caring Beyond Comfort<br>This Is Who We Are</h3>
+                </div>
+                <ul style="list-style: none; padding:0;">
+                    <li style="margin-bottom: 15px;" data-i18n="about_li1">• Welcome to Loving Home, a place where every pet is treated with genuine care and respect.</li>
+                    <li style="margin-bottom: 15px;" data-i18n="about_li2">• Located in the heart of Hong Kong, it's a full-service dog hotel that offers a safe, clean, and comfortable environment.</li>
+                    <li style="margin-bottom: 15px;" data-i18n="about_li3">• The team provides 24-hour supervision, cozy private rooms, and play areas that keep every dog active, relaxed, and happy.</li>
+                    <li style="margin-bottom: 15px;" data-i18n="about_li4">• Loving Home is always ready to help whether you're traveling, at work, or need a reliable place for your pet to stay.</li>
+                    <li style="margin-bottom: 15px;" data-i18n="about_li5">• The center also offers premium pet products such as nutritious food, fun toys, grooming tools, and soft beds to support each pet's well-being.</li>
+                    <li style="margin-bottom: 15px;" data-i18n="about_li6">• The goal is simple: to create a caring space where pets feel loved, comfortable, and truly at home.</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80" alt="Dogs Playing">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="contact-bg-wrapper">
+            <div class="form-overlay">
+                <h2 data-i18n="form_title">Start your journey with Loving Homes</h2>
+                <form>
+                    <div class="form-group">
+                        <label data-i18n="form_name">Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_phone">Phone</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_email">Email</label>
+                        <input type="email">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_comment">Comment</label>
+                        <textarea rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" data-i18n="form_submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo-row">
+            <img src="images/footer logo.png" alt="Loving Home Club"> 
+            <h3 class="footer-logo-text">LOVING HOME CLUB</h3>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-col-contact">
+                <div class="contact-row">
+                    <img src="images/call.png" class="icon-img contact-icon" alt="Phone">
+                    +852 1234 5678
+                </div>
+                <div class="contact-row">
+                    <img src="images/email.png" class="icon-img contact-icon" alt="Email">
+                    info@lovinghome.hk
+                </div>
+            </div>
+            
+            <div class="footer-col-links">
+                <h3 data-i18n="footer_links">Quick Links</h3>
+                <div class="footer-link-list">
+                    <p><a href="#" data-i18n="nav_home">Home</a></p>
+                    <p><a href="#packages" data-i18n="nav_packages">Packages</a></p>
+                    <p><a href="#facilities" data-i18n="nav_facilities">Facilities</a></p>
+                    <p><a href="#about" data-i18n="nav_about">About us</a></p>
+                    <p><a href="#contact" data-i18n="nav_contact">Contact us</a></p>
+                </div>
+            </div>
+
+            <div class="footer-col-address">
+                <h3 data-i18n="footer_address">Address</h3>
+                <div class="address-text">
+                    <p data-i18n="addr_1">Loving Home</p>
+                    <p data-i18n="addr_2">Unit 1508, Enterprise Square</p>
+                    <p data-i18n="addr_3">88 Tai Lin Pai Road,</p>
+                    <p data-i18n="addr_4">Kwai Chung</p>
+                    <p data-i18n="addr_5">Hong Kong</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="social-icons">
+            <img src="images/facebook.png" class="icon-img social-icon" alt="Facebook">
+            <img src="images/instagram.png" class="icon-img social-icon" alt="Instagram">
+        </div>
+
+        <div class="copyright" data-i18n="footer_copy">
+            © 2025 Loving Home. All Rights Reserved. | Terms & Conditions | Privacy Policy | Designed by Fast Generations
+        </div>
+    </footer>
+
+    <script>
+        // Translations Object
+        const translations = {
+            en: {
+                search_placeholder: "Search...",
+                nav_home: "Home",
+                nav_packages: "Packages",
+                nav_about: "About us",
+                nav_contact: "Contact us",
+                nav_facilities: "Facilities",
+                hero_title: "Loving Home",
+                hero_subtitle: "Hong Kong's Premier<br>Dog Daycare & Boarding",
+                hero_tagline: "We're Here for You",
+                hero_btn: "Contact us",
+                facilities_title: "🦴 Our Premium Facilities",
+                facility_1: "private grass areas",
+                facility_2: "Rooms with underfloor heating/cooling and TV",
+                facility_3: "woodland walks",
+                facility_4: "Rooms with framed photos",
+                facility_5: "24-hour on-call veterinary services",
+                facility_6: "indoor play barn.",
+                facility_7: "Secure outdoor paddocks",
+                facility_8: "Chauffeur ‘collect and return’ service",
+                facility_9: "pet watch",
+                buy_now: "Buy now",
+                book_now: "Book Now",
+                packages_title: "🏡 Personalized Packages – Tailored Care for Every Pet ♥️",
+                pkg_1_title: "✨ The Spoiled Pup Special",
+                pkg_1_li1: "Four walks/activities per day",
+                pkg_1_li2: "Private grass area",
+                pkg_1_li3: "Daily updates/photos",
+                pkg_1_li4: "Treats (as agreed with owner)",
+                pkg_2_title: "🌟 The Cozy Comfort Classic",
+                pkg_2_li1: "three walks/activities per day",
+                pkg_2_li2: "indoor play barn",
+                pkg_2_li3: "zen zone",
+                pkg_2_li4: "grooming session.",
+                pkg_3_title: "🌞 The Fun-Day Package",
+                pkg_3_li1: "two walks per day",
+                pkg_3_li2: "external play area",
+                pkg_3_li3: "agility track",
+                pkg_3_li4: "sand digging the pit.",
+                pkg_4_title: "💫Build Your Custom Package",
+                pkg_4_desc: "Every pet is unique. Tailor the perfect stay by mixing and matching our services to fit your dog's specific needs and personality.",
+                custom_now: "Custom now",
+                about_main_title: "🐾 About LOVING HOME – Where Every Pet Feels at Home 🏡",
+                about_sub_title: "Caring Beyond Comfort<br>This Is Who We Are",
+                about_li1: "• Welcome to Loving Home, a place where every pet is treated with genuine care and respect.",
+                about_li2: "• Located in the heart of Hong Kong, it's a full-service dog hotel that offers a safe, clean, and comfortable environment.",
+                about_li3: "• The team provides 24-hour supervision, cozy private rooms, and play areas that keep every dog active, relaxed, and happy.",
+                about_li4: "• Loving Home is always ready to help whether you're traveling, at work, or need a reliable place for your pet to stay.",
+                about_li5: "• The center also offers premium pet products such as nutritious food, fun toys, grooming tools, and soft beds to support each pet's well-being.",
+                about_li6: "• The goal is simple: to create a caring space where pets feel loved, comfortable, and truly at home.",
+                form_title: "Start your journey with Loving Homes",
+                form_name: "Name",
+                form_phone: "Phone",
+                form_email: "Email",
+                form_comment: "Comment",
+                form_submit: "Sign Up",
+                footer_links: "Quick Links",
+                footer_address: "Address",
+                addr_1: "Loving Home",
+                addr_2: "Unit 1508, Enterprise Square",
+                addr_3: "88 Tai Lin Pai Road,",
+                addr_4: "Kwai Chung",
+                addr_5: "Hong Kong",
+                footer_copy: "© 2025 Loving Home. All Rights Reserved. | Terms & Conditions | Privacy Policy | Designed by Fast Generations"
+            },
+            ar: {
+                search_placeholder: "بحث...",
+                nav_home: "الرئيسية",
+                nav_packages: "الباقات",
+                nav_about: "من نحن",
+                nav_contact: "اتصل بنا",
+                nav_facilities: "المرافق",
+                hero_title: "Loving Home",
+                hero_subtitle: "أفضل رعاية للكلاب<br>في هونغ كونغ",
+                hero_taglinec: "نحن هنا لأجلك",
+                hero_btn: "تواصل معنا",
+                facilities_title: "مرافقنا المميزة 🦴",
+                facility_1: "مناطق عشبية خاصة",
+                facility_2: "غرف مدفأة/مكيفة مع تلفاز",
+                facility_3: "جولات مشي في الغابة",
+                facility_4: "غرف مع إطارات صور",
+                facility_5: "خدمات بيطرية على مدار 24 ساعة",
+                facility_6: "صالة ألعاب داخلية",
+                facility_7: "مناطق خارجية مؤمنة",
+                facility_8: "خدمة التوصيل 'استلام وإرجاع'",
+                facility_9: "مراقبة الحيوانات الأليفة",
+                buy_now: "اشتر الآن",
+                book_now: "احجز الآن",
+                packages_title:"🏡 باقات مخصصة - رعاية مصممة لكل حيوان أليف ♥️",
+                pkg_1_title: "باقة الدلال الخاصة✨",
+                pkg_1_li1: "أربع جولات مشي/أنشطة يومياً",
+                pkg_1_li2: "منطقة عشبية خاصة",
+                pkg_1_li3: "تحديثات يومية وصور",
+                pkg_1_li4: "مكافآت (حسب اتفاق المالك)",
+                pkg_2_title: "كلاسيكيات الراحة الدافئة🌟",
+                pkg_2_li1: "ثلاث جولات مشي/أنشطة يومياً",
+                pkg_2_li2: "صالة ألعاب داخلية",
+                pkg_2_li3: "منطقة استرخاء",
+                pkg_2_li4: "جلسة عناية.",
+                pkg_3_title: "باقة يوم المرح🌞 ",
+                pkg_3_li1: "جولتان مشي يومياً",
+                pkg_3_li2: "منطقة لعب خارجية",
+                pkg_3_li3: "مسار رشاقة",
+                pkg_3_li4: "حفر في الرمل.",
+                pkg_4_title: "صمم باقتك الخاصة💫",
+                pkg_4_desc: "كل حيوان أليف فريد من نوعه. صمم الإقامة المثالية من خلال اختيار ودمج خدماتنا لتناسب احتياجات وشخصية كلبك.",
+                custom_now: "صمم الآن",
+                about_main_title: "🏡عن LOVING HOME – حيث يشعر كل أليف وكأنه في منزله🐾 ",
+                about_sub_title: "رعاية تفوق الراحة<br>هذا هو ما نحن عليه",
+                about_li1: "• مرحبًا بكم في Loving Home، المكان الذي يُعامل فيه كل حيوان أليف برعاية واحترام حقيقيين.",
+                about_li2: "• يقع في قلب هونغ كونغ، وهو فندق متكامل للكلاب يوفر بيئة آمنة ونظيفة ومريحة.",
+                about_li3: "• يوفر الفريق إشرافاً على مدار 24 ساعة، وغرف خاصة مريحة، ومناطق لعب تبقي كل كلب نشيطاً ومسترخياً وسعيداً.",
+                about_li4: "• Loving Home مستعد دائماً للمساعدة سواء كنت مسافراً، في العمل، أو تحتاج لمكان موثوق لبقاء أليفك.",
+                about_li5: "• يقدم المركز أيضاً منتجات فاخرة للحيوانات مثل الطعام المغذي، الألعاب الممتعة، أدوات العناية، والأسرة الناعمة لدعم رفاهية كل أليف.",
+                about_li6: "• الهدف بسيط: خلق مساحة رعاية يشعر فيها الأليف بالحب والراحة وكأنه في منزله حقاً.",
+                form_title: "ابدأ رحلتك مع Loving Homes",
+                form_name: "الاسم",
+                form_phone: "الهاتف",
+                form_email: "البريد",
+                form_comment: "تعليق",
+                form_submit: "سجل الآن",
+                footer_links: "روابط سريعة",
+                footer_address: "العنوان",
+                addr_1: "Loving Home",
+                addr_2: "وحدة 1508، ساحة إنتربرايز",
+                addr_3: "88 طريق تاي لين باي،",
+                addr_4: "كواي تشونغ",
+                addr_5: "هونغ كونغ",
+                footer_copy: "© 2025 Loving Home. All Rights Reserved. | Terms & Conditions | Privacy Policy | Designed by Fast Generations"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // Language Toggle
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const body = document.body;
+            
+            if (currentLang === 'en') {
+                currentLang = 'ar';
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+                body.classList.add('rtl-active');
+            } else {
+                currentLang = 'en';
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', 'en');
+                body.classList.remove('rtl-active');
+            }
+
+            updateContent();
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+                        el.placeholder = translations[currentLang][key];
+                    } else {
+                        el.innerHTML = translations[currentLang][key];
+                    }
+                }
+            });
+        }
+
+        // Menu Toggle (Mobile)
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const nav = document.getElementById('navLinks');
+            if(nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
